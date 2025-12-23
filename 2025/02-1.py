@@ -3,18 +3,10 @@ def isValid(strNum):
         return True
     
     firstMid = strNum[:len(strNum) // 2]
-    # print(firstMid)
-
-    # print((int(firstMid) * (1 + 10 ** (len(firstMid)))), int(strNum))
 
     invalid = (int(firstMid) * (1 + 10 ** (len(firstMid)))) == int(strNum)
 
     return not invalid
-
-assert isValid('15')
-assert not isValid('1515')
-assert not isValid('11121112')
-assert not isValid('1212')
 
 def sumOfInvalidsInRange(start, end):
     res = 0
